@@ -1,0 +1,288 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 98%;
+	max-width: 960px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
+	border-bottom: 3px solid #931420;
+		background-image: -moz-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+}
+header h2 {
+	font-size: 175%;
+	color: #800000;
+}
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+}
+header img {
+	float: left;
+	padding: 0 2%;
+}
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
+}
+/* the styles for the navigation menu */
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#nav_menu ul li {
+	float: left;
+}
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+	width:100%;
+}
+#nav_menu li {
+	float: left;
+    width: 20%;
+}
+#nav_menu li a{
+	display: block;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+}
+#nav_menu a.current {
+	color: yellow;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+	width: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*media query */
+@media (max-width: 768px) {
+    /* Adjust font size for <a> elements within h2 elements of the aside */
+    aside h2 a {
+        font-size: 85%;
+    }
+	 section h1 {
+        font-size: 125%;
+    }
+
+    /* Adjust font size for h2 elements in the section and aside */
+    section h2,
+    aside h2 {
+        font-size: 110%;
+    }
+}
+/*For sidebar below*/
+@media (max-width: 960px) {
+    #nav_menu li {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    #nav_menu li a {
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+
+    section, aside {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    aside h2 a {
+        font-size: 85%;
+    }
+
+    /* Adjust font size for h1 element in the section */
+    section h1 {
+        font-size: 125%;
+    }
+
+    /* Adjust font size for h2 elements in the section and aside */
+    section h2,
+    aside h2 {
+        font-size: 110%;
+    }
+
+    /* Change the image in the header */
+    header img {
+        float: none; 
+        display: block; 
+        margin: 0 auto; 
+    }
+
+    /* Center the contents of the header */
+    header {
+        text-align: center;
+    }
+
+    header h2,
+    header h3 {
+        margin: 0; 
+    }
+	section,
+    aside {
+        float: none;
+        width: calc(100% - 40px); 
+        padding-right: 20px; 
+    }
+	/* Display speakers in two columns */
+    aside div {
+        column-count: 2;
+    }
+}
+#mobile_menu {
+    display: none;
+}
+/* Media query for the mobile menu*/
+@media only screen and (max-width: 600px) {
+    #nav_menu {
+        display: none;
+    }
+
+    /* Display the mobile menu */
+    #mobile_menu {
+        display: block;
+    }
+
+    /* Set the background color of the mobile menu */
+	#mobile_menu.slicknav_menu {
+        background-color: #800000 !important;
+    }
+}
+
+/* Media query for viewport width more than 385 */
+@media only screen and (min-width: 386px) {
+    body {
+        font-size: 90%;
+    }
+}
+/* the styles for the section */
+section {
+	width: 65%;
+	float: right;
+	padding: 0 2% 2% 2%;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: right;
+	margin: 1% 0 2% 2%;
+	border: 1px solid black;
+	max-width: 30%;
+	min-width: 150px;
+}
+
+/* the styles for the aside */
+aside {
+	width: 30%;
+	float: right;
+	padding: 0 0 2% 2%;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: #931420;
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
